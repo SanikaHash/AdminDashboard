@@ -1,0 +1,65 @@
+* {
+  background-color: rgb(255, 251, 248);
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: 100px;
+  margin-left: 300px;
+}
+
+th, td {
+  padding: 6px;
+  text-align: left;
+  border: 1px solid #080808;
+}
+
+th {
+  color: rgb(20, 16, 209);
+}
+
+tr:hover {
+  background-color: #eceaea;
+
+}
+
+/* thead {
+  border-bottom: 2px solid black; /* Adjust the color and thickness of the line as needed */
+/* } */
+
+
+
+/* Remove background-color and adjust border properties for minimal lines */
+th, td {
+  background-color:transparent;
+}
+
+tr {
+  background-color:transparent;
+}
+
+/* Apply a basic style to buttons */
+button {
+  background-color: #3498db; /* Change to your preferred color */
+  color: #fff; /* Text color */
+  padding: 10px 15px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  margin-right: 10px; /* Provide some spacing between buttons */
+}
+
+/* Change button style on hover */
+button:hover {
+  background-color: #2980b9; /* Change to a slightly different shade on hover */
+}
+
+input {
+  display: block; /* Ensures the input is displayed as a block element */
+}

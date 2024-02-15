@@ -1,0 +1,29 @@
+
+<app-dashboard></app-dashboard>
+<table class="user-list">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Mobile No.</th>
+    <th>Email ID</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <p>Name: {{ user.Name }}</p>
+    <p>Mobile Number: {{ user.MobileNumber }}</p>
+    <p>Email Address: {{ user.EmailAddress }}</p>
+    <td>
+
+      <button (click)="editUser(user)">
+        <i class="fas fa-edit"></i> <!-- Font Awesome edit icon -->
+      </button>
+      <button (click)="deleteUser(user)">
+        <i class="fas fa-trash-alt"></i> <!-- Font Awesome delete icon -->
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

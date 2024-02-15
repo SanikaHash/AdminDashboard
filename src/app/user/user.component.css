@@ -1,0 +1,80 @@
+* {
+  background-color: rgb(255, 251, 248);
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 100px;
+  margin-left: 300px;
+}
+
+th, td {
+  padding: 6px;
+  text-align: left;
+  border: 1px solid #080808;
+}
+
+th {
+  color: rgb(20, 16, 209);
+}
+
+tr:hover {
+  background-color: #eceaea;
+
+}
+
+th, td {
+  background-color:transparent;
+}
+
+tr {
+  background-color:transparent;
+}
+
+/* Apply a basic style to buttons */
+
+
+
+
+
+
+/* Hover effect */
+/* Styles for the user list table */
+/*.user-list {*/
+/*  width: 100%;*/
+/*  border-collapse: collapse;*/
+/*}*/
+
+/*.user-list th, .user-list td {*/
+/*  border: 1px solid #dddddd;*/
+/*  padding: 8px;*/
+/*  text-align: left;*/
+/*}*/
+
+.user-list th {
+ background-color: #f2f2f2;
+}
+
+.user-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/*!* Styles for the clickable button icons *!*/
+button {
+background-color: transparent;
+  border: none;
+cursor: pointer;
+/font-size: 1.2em;
+margin-right: 5px;
+}
+
+button:hover {
+color: red;
+}
+

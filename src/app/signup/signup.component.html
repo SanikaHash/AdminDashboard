@@ -1,0 +1,43 @@
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-md-6">-->
+<!--      <div class="card">-->
+<!--        <div class="text-center">-->
+<!--          <h1>Signup</h1>-->
+<!--        </div>-->
+<!--        <br>-->
+<!--        <form [formGroup]="signupform" (ngSubmit)="signup()">-->
+<!--          <div class="mb-2">-->
+<!--            <label for="exampleInputEmail1" class="form-label">Name</label>-->
+<!--            <input type="text" formControlName="name" class="form-control" placeholder="enter your name" id="exampleInputEmail1" aria-describedby="emailHelp">-->
+<!--            <small *ngIf="signupform.get('name')?.hasError('invalidName') && signupform.get('name')?.touched" class="text-danger"> Name can only contain alphabets and white spaces</small>-->
+<!--          </div>-->
+<!--          <div class="mb-2">-->
+<!--            <label for="exampleInputEmail2" class="form-label">Email address</label>-->
+<!--            <input type="email" formControlName="email" class="form-control" placeholder="enter your email id" id="exampleInputEmail2" aria-describedby="emailHelp">-->
+<!--            <small *ngIf="signupform.get('email')?.invalid && signupform.get('email')?.touched" class="text-danger"> Email is Required</small>-->
+<!--          </div>-->
+<!--          <div class="mb-2">-->
+<!--            <label for="exampleInputEmail3" class="form-label">Mobile Number</label>-->
+<!--            <input type="text" formControlName="mobile" class="form-control" placeholder="enter your Mobile number" id="exampleInputEmail3" aria-describedby="emailHelp">-->
+<!--            <small *ngIf="signupform.get('mobile')?.errors?.['required'] && signupform.get('mobile')?.touched" class="text-danger">Mobile number is Required</small>-->
+<!--            <small *ngIf="mobileAlertVisible" class="text-danger">Please enter numbers only</small>-->
+<!--            <small *ngIf="signupform.get('mobile')?.errors?.['pattern'] && signupform.get('mobile')?.touched" class="text-danger">Mobile number must be exactly 10 digits</small>-->
+<!--          </div>-->
+<!--          <div class="mb-2">-->
+<!--            <label for="exampleInputPassword1" class="form-label">Password</label>-->
+<!--            <input type="password" formControlName="password" class="form-control" placeholder="Enter your password" id="exampleInputPassword1">-->
+<!--            <small *ngIf="signupform.get('password')?.invalid && signupform.get('password')?.touched" class="text-danger">Password is Required</small>-->
+<!--          </div>-->
+<!--          <div class="mb-2">-->
+<!--            <label for="exampleInputConfirmPassword1" class="form-label">Confirm Password</label>-->
+<!--            <input type="password" formControlName="confirmPassword" class="form-control" placeholder="Confirm your password" id="exampleInputConfirmPassword1">-->
+<!--            <small *ngIf="passwordMismatch" class="text-danger">Passwords do not match</small>-->
+<!--          </div>-->
+<!--          <button style="margin-top:3px;" type="submit" [disabled]="signupform.invalid" class="btn btn-primary" (click)="signup()">Signup</button>-->
+<!--        </form>-->
+<!--        <a style="color:blue;margin-top:10px;" routerLink="/login">Already Registered? Click here to Login</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

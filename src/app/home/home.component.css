@@ -1,0 +1,158 @@
+/*img {*/
+/*  position: absolute;*/
+/*  top: 35px; !* Adjust the value based on how much you want to move the image down *!*/
+/*}*/
+/*.homecontent*/
+/*{*/
+/*  position: absolute;*/
+/*  top: 50%;*/
+/*  left: 25%;*/
+/*  right: 40%;*/
+/*  transform: translate(-50%,-50%);*/
+/*}*/
+/*.homecontent h1*/
+/*{*/
+/*  color: #ffffff;*/
+/*  font-size: 40px;*/
+
+/*}*/
+/*@media screen and (max-width:600px)*/
+/*{*/
+/*  .homecontent h1*/
+/*  {*/
+/*    font-size: 30px;*/
+
+/*  }*/
+
+/*}*/
+
+body {
+  background-color: #111;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  background-color: #111;
+  padding-top: 60px; /* Adjusted to accommodate the fixed navbar */
+  color: white;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ece1e1;
+  display: block;
+  transition: 0.3s;
+}
+.content {
+  margin-left: 250px;
+  padding: 16px;
+}
+#sidebarMenu {
+  background-color: rgb(21, 12, 37) !important;
+  color: white; /* You may want to set the text color to white or another readable color on a dark background */
+
+}
+.nav-item {
+  position: relative;
+}
+.menu {
+  position: absolute;
+  z-index: 2;
+  background:#4c0f0f;
+  display: none;
+  padding: 15px 15px;
+
+
+}
+.nav-item:hover .menu{
+  display: block;
+}
+.menu a{
+  width: 100%;
+  min-width: 8rem;
+}
+/*.logo-container {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  padding: 40px; !* Adjust as needed *!*/
+/*  margin-left: 80px;*/
+/*}*/
+/*.logo-container p{*/
+/*  text-align: center;*/
+/*}*/
+/*.logo{*/
+/*  display: block;*/
+/*  margin-bottom: 10px;*/
+/*}*/
+/*.logo-container {*/
+/*  position: relative;*/
+/*}*/
+
+/*.logo-container {*/
+/*  text-align: center; !* Center the content horizontally *!*/
+/*  font-weight: bold; !* Make the text bold *!*/
+/*  font-style: italic; !* Apply italic style to the text *!*/
+/*  font-size: 20px;*/
+
+/*}*/
+
+/*.logo {*/
+/*  display: inline-block; !* Display the image as inline-block to center it *!*/
+/*  margin-bottom: 10px;*/
+/*  margin-top: 80px; !* Add some space between the image and the text *!*/
+/*  margin-left: 90px;*/
+/*}*/
+/*.logo-container p{*/
+/*  text-align: center;*/
+/*  margin-left: 20px;*/
+/*}*/
+/*.row{*/
+/*  text-align: center;*/
+/*}*/
+.img-box {
+  margin-left: 500px;
+  margin-top: 80px;
+}
+.img-box p {
+  margin-left: 130px;
+  font-weight: bold;
+
+}
+.img-img {
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+
+
+
+

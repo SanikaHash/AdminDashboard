@@ -1,0 +1,39 @@
+* {
+  background-color: rgb(255, 251, 248);
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: 100px;
+  margin-left: 300px;
+}
+
+th, td {
+  padding: 6px;
+  text-align: center ;
+  border: 1px solid #080808;
+}
+
+th {
+  color: rgb(20, 16, 209);
+}
+
+tr:hover {
+  background-color: #eceaea;
+
+}
+
+
+th, td {
+  background-color:transparent;
+}
+
+tr {
+  background-color: transparent;
+}
