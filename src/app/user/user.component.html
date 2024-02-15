@@ -11,11 +11,10 @@
   </thead>
   <tbody>
   <tr *ngFor="let user of users">
-    <p>Name: {{ user.Name }}</p>
-    <p>Mobile Number: {{ user.MobileNumber }}</p>
-    <p>Email Address: {{ user.EmailAddress }}</p>
+    <td>{{ user.Name }}</td>
+    <td> {{ user.MobileNumber }}</td>
+    <td> {{ user.EmailAddress }}</td>
     <td>
-
       <button (click)="editUser(user)">
         <i class="fas fa-edit"></i> <!-- Font Awesome edit icon -->
       </button>
