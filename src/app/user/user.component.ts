@@ -1,43 +1,46 @@
-import { Component, OnInit } from '@angular/core';
-import { UsersService} from "../service/service/users.service";
+import { Component,OnInit } from '@angular/core';
+import { UsersService } from '../service/service/users.service';
+
+
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrl: './user.component.css'
 })
-export class UserComponent implements OnInit {
+export class UserComponent  implements OnInit {
   searchTerm: string = '';
-  users: any[] = [];
+  user: any;
 
-  constructor(private userService: UsersService) { }
+  editingUser: any = {}; // Object to store currently edited user
+
+
+
+  editedUser: any = {}; // Object to store currently edited user
+  showEditModal = false; // Flag to control visibility of edit modal
+  constructor(private userservice: UsersService) {
+  }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe(users => {
-      this.users = users;
+    this.userservice.getusers().subscribe(users => {
+      this.user = users;
     });
   }
 
-  addUser() {
-    const newUser = {
-      // Construct the new user object here based on your form data
-      name: 'New User',
-      mobile: '1234567890',
-      email: 'newuser@example.com'
-    };
-    this.userService.addUser(newUser).subscribe(response => {
-      console.log('User added successfully:', response);
-      // Refresh the user list or perform any other actions after adding the user
-    }, error => {
-      console.error('Error adding user:', error);
+  editUser(user: any) {
+    this.editingUser = { ...user }; // Copy user object to avoid changing the original data directly
+  }
+
+  updateUser() {
+    this.userservice.updateUser(this.editingUser).subscribe(updatedUser => { // Corrected method name
+      // Handle any necessary action after updating
+      this.editingUser = {}; // Clear editingUser object
     });
   }
 
-  editUser(user: { name: string, mobile: string, email: string }) {
-    console.log('Edit user clicked:', user);
+  deleteUser(user: any) {
+    // Implement delete functionality if needed
   }
 
-  deleteUser(user: { name: string, mobile: string, email: string }) {
-    console.log('Delete user clicked:', user);
-  }
+
 }

@@ -11,7 +11,7 @@ import { UserComponent } from "./user/user.component";
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BookComponent } from "./book/book.component";
-import { AdduserComponent} from "./adduser/adduser.component";
+import { AddUserComponent } from "./adduser/adduser.component";
 import { AddbulkComponent} from "./addbulk/addbulk.component";
 import {LoginComponent} from "./login/login.component";
 import {SignupComponent} from "./signup/signup.component";
@@ -26,7 +26,7 @@ import {SignupComponent} from "./signup/signup.component";
         OrderComponent,
         UserComponent,
         BookComponent,
-        AdduserComponent,
+        AddUserComponent,
         AddbulkComponent,
         LoginComponent,
         SignupComponent

@@ -6,7 +6,7 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 import {OrderComponent} from "./order/order.component";
 import {UserComponent} from "./user/user.component";
 import { BookComponent } from "./book/book.component";
-import { AdduserComponent} from "./adduser/adduser.component";
+import {AddUserComponent} from "./adduser/adduser.component";
 import { AddbulkComponent} from "./addbulk/addbulk.component";
 import { LoginComponent} from "./login/login.component";
 import { SignupComponent} from "./signup/signup.component";
@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'Dashboard/Orders', component: OrderComponent},
   {path: 'Dashboard/Users', component: UserComponent},
   {path: 'Dashboard/Books', component: BookComponent},
-  {path: 'Dashboard/Add New', component: AdduserComponent},
+  {path: 'Dashboard/Add New', component: AddUserComponent},
   {path: 'Dashboard/Add Bulk', component: AddbulkComponent},
   {path: 'Dashboard/Login',component:LoginComponent},
 

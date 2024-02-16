@@ -1,4 +1,3 @@
-
 <app-dashboard></app-dashboard>
 <table class="user-list">
   <thead>
@@ -10,11 +9,12 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let user of users">
+  <tr *ngFor="let user of user">
     <td>{{ user.Name }}</td>
-    <td> {{ user.MobileNumber }}</td>
-    <td> {{ user.EmailAddress }}</td>
+    <td>{{ user.MobileNumber }}</td>
+    <td>{{ user.EmailAddress }}</td>
     <td>
+
       <button (click)="editUser(user)">
         <i class="fas fa-edit"></i> <!-- Font Awesome edit icon -->
       </button>
@@ -22,7 +22,24 @@
         <i class="fas fa-trash-alt"></i> <!-- Font Awesome delete icon -->
       </button>
     </td>
+
   </tr>
   </tbody>
 </table>
+
+<!-- Edit form -->
+<div *ngIf="editingUser">
+  <label for="name">Name:</label>
+  <input id="name" type="text" [(ngModel)]="editingUser.Name" placeholder="Name">
+
+  <label for="mobile">Mobile Number:</label>
+  <input id="mobile" type="text" [(ngModel)]="editingUser.MobileNumber" placeholder="Mobile Number">
+
+  <label for="email">Email Address:</label>
+  <input id="email" type="email" [(ngModel)]="editingUser.EmailAddress" placeholder="Email Address">
+
+  <button (click)="updateUser()">Update</button>
+</div>
+
+
 

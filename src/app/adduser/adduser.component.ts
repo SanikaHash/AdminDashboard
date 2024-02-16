@@ -1,43 +1,29 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import {UsersService} from "../service/service/users.service";
-
-interface AddUserResponse{
-  message: String;
-  data: any;
-}
+import { AdduserService } from "../aservice/adduser.service";
 
 @Component({
   selector: 'app-adduser',
   templateUrl: './adduser.component.html',
   styleUrls: ['./adduser.component.css']
 })
-export class AdduserComponent {
-  formData = {
-    Name: '',
-    MobileNumber: '',
-    EmailAddress: ''
-  };
+export class AddUserComponent {
+  formData: any = {};
+  showSuccessMessage: boolean = false;
 
-  showSuccessMessage = false;
+  constructor(private userService: AdduserService) {}
 
-  constructor(private userService: UsersService) {}
-
-  // @ts-ignore
   onSubmit(form: NgForm) {
-    if (form.valid) {
-      this.userService.addUser(this.formData).subscribe(
-        () => {
-          console.log('User added successfully');
+    this.userService.addUser(this.formData)
+      .subscribe(
+        response => {
+          console.log(response);
           this.showSuccessMessage = true;
-          form.reset();
+          form.resetForm();
+          setTimeout(() => this.showSuccessMessage = false, 3000); // hide success message after 3 seconds
         },
-        error => {
-          console.error('Error adding user:', error);
-        }
+        error => console.error(error)
       );
-    } else {
-      alert('Please fill all the fields');
-    }
   }
 }
+
