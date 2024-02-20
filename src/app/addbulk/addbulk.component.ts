@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, signal} from '@angular/core';
 
 @Component({
   selector: 'app-addbulk',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './addbulk.component.css'
 })
 export class AddbulkComponent {
+  onSubmit = signal<any | null>(null);
 
 }

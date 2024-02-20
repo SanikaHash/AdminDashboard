@@ -14,9 +14,49 @@
 
 .file-input {
   display: none;
+
 }
 
 /* Hover effect */
 .file-label:hover {
   background-color: #0056b3;
+}
+
+.description {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+
+.description textarea {
+  width: 50%;
+  height: 50px;
+  resize: vertical;
+}
+.attach{
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+.description-attachments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  display: block;
+  margin: 20px auto;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+  width: 150px;
+  height: 45px;
 }
