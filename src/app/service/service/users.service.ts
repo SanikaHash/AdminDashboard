@@ -16,6 +16,10 @@ export class UsersService {
     return this.http.put<any>(`http://localhost:5000/api/contacts/${user._id}`, user);
   }
 
+  deleteUser(user: any): Observable<any> {
+    return this.http.delete<any>(`http://localhost:5000/api/contacts/${user._id}`);
+  }
+
 
 
 }
