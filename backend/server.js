@@ -56,6 +56,17 @@ app.get('/api/contacts', async (req, res) => {
   }
 });
 
+// Delete a contact
+app.delete('/api/contacts/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    await ContactModel.findByIdAndDelete(id);
+    res.status(204).end(); // No content, successful deletion
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 const orderSchema = new mongoose.Schema({
   order: String,
   orderdetails: String,
