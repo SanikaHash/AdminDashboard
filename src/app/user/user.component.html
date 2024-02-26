@@ -28,6 +28,32 @@
 </table>
 
 
+<!-- Edit form -->
+<div class="edit" *ngIf="editingUser">
+  <label for="name">Name:</label>
+  <input id="name" type="text" [(ngModel)]="editingUser.Name" placeholder="Name">
+
+  <div>
+    <label for="mobile">Mobile Number:</label>
+    <input id="mobile" type="text" [(ngModel)]="editingUser.MobileNumber" placeholder="Mobile Number">
+  </div>
+  <div>
+    <label for="email">Email Address:</label>
+    <input id="email" type="email" [(ngModel)]="editingUser.EmailAddress" placeholder="Email Address">
+  </div>
+  <div>
+    <button (click)="updateUser(); closeForm()">Update</button>
+    <button (click)="closeForm()">Close</button>
+  </div>
+  <div *ngIf="updateMessage">{{ updateMessage }}</div>
+</div>
+
+
+
+
+
+
+
 
 
 
