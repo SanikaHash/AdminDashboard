@@ -12,6 +12,10 @@ import { ConfirmationDialogComponent } from "../confirmation-dialog/confirmation
 export class UserComponent  implements OnInit {
 
   user: any;
+  editingUser: any = null;
+
+  updateMessage: string = '';
+
 
   constructor(private userservice: UsersService,private dialog: MatDialog) {
   }
@@ -26,6 +30,25 @@ export class UserComponent  implements OnInit {
       this.user = users;
     });
   }
+  editUser(user: any) {
+    this.editingUser = { ...user }; // Copy user object to avoid changing the original data directly
+  }
+
+  updateUser() {
+    this.userservice.updateUser(this.editingUser).subscribe(updatedUser => {
+      this.updateMessage = 'User updated successfully';
+      const index = this.user.findIndex((u: any) => u.id === updatedUser.id);
+      if (index !== -1) {
+        this.user[index] = updatedUser; // Update the user in the array
+      }
+      this.closeForm();
+      this.loadUsers();
+    });
+  }
+  closeForm() {
+    this.editingUser = null;
+  }
+
 
   deleteUser(user: any) {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent);
@@ -38,7 +61,4 @@ export class UserComponent  implements OnInit {
     });
   }
 
-  editUser(user: any) {
-
-  }
 }

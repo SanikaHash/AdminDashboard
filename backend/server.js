@@ -56,6 +56,18 @@ app.get('/api/contacts', async (req, res) => {
   }
 });
 
+app.put('/api/contacts/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedContact = await ContactModel.findByIdAndUpdate(id, req.body, { new: true });
+    res.json(updatedContact);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
 // Delete a contact
 app.delete('/api/contacts/:id', async (req, res) => {
   try {
